@@ -8,4 +8,5 @@ Wendy Rodriguez
 
 1. Alberto Duque Villegas
 2. Juan Fernando Ramírez Vélez
+3. Jessit Anaya Alsina
 
