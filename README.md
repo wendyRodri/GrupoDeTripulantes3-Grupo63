@@ -10,3 +10,7 @@ Wendy Rodriguez
 2. Juan Fernando Ramírez Vélez
 3. Jessit Anaya Alsina
 4. Cristian Rozo López
+
+## Proyecto
+CPV Control de peso vehicular
+(sujeto a cambio de nombre si optamos por una tienda de software)
