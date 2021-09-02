@@ -13,5 +13,6 @@ Wendy Rodriguez
 5. Juan Carlos Castro Higuita
 
 ## Proyecto
-CPV Control de peso vehicular
+G3 Virtual Store
 (sujeto a cambio de nombre si optamos por una tienda de software)
+
