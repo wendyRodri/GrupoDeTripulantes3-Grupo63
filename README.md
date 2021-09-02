@@ -10,6 +10,7 @@ Wendy Rodriguez
 2. Juan Fernando Ramírez Vélez
 3. Jessit Anaya Alsina
 4. Cristian Rozo López
+5. Juan Carlos Castro Higuita
 
 ## Proyecto
 CPV Control de peso vehicular
