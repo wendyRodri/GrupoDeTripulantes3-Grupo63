@@ -1,17 +1,22 @@
-
 :root{
 
     --blanco: #fff;
     --negro: #000;
     --gris: #757575;
     --secundario: #0097a7;
+    --primario: rgba(255, 193, 7,1);
+    --oscuro: rgb(0, 0, 0);
     
 
 }
-html{
+html{/*Hace cambios generales para todo el html*/
+    font-size: 62.5%;
+    box-sizing: border-box; /*Para colocarle un borde al css (recuerde que es una caja)*/
 
-font-size: 100%;
+}
 
+*,*:before,:after{ /* */
+    box-sizing: inherit;
 }
 
 body{
@@ -24,8 +29,9 @@ font-family:"krub", sans-serif;
 .titulo{
 
     text-align: center;
+    color: blue;
     font-size: 2em;
-    font-weight: 1000;
+    font-weight: 400;
 
     }
 .contenedor{
@@ -40,7 +46,54 @@ font-family:"krub", sans-serif;
 }
 .navegacion-principal{
     
-    padding: 1rem;
+    display:flex;
+flex-direction: column;
 
+}
+
+@media(min-width: 700px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{
+    color:var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem; /*Cambia la margen interna*/
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+    
+}
+
+.img1{
+    height: 410px;
+    background-image: url(../IMG/EscritorioOficina.jpeg);
+    margin-bottom: 2rem;
+    position: relative;
+    
+}
+
+.contenido-img1{ /*Ajustar la imagen*/
+background-color: rgba(0, 0, 0, 0.7); /*Un negro para que no se vea muy brillante, pero algo opaco*/
+position: absolute;
+width: 100%;
+height: 100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+}
+
+.contenido-img1 h2,
+.contenido-img1 p{
+    color: var --blanco
 }
 
