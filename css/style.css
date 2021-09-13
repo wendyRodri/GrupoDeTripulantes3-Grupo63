@@ -1,99 +1,142 @@
 :root{
 
+    --primary: #1196F5;
     --blanco: #fff;
     --negro: #000;
-    --gris: #757575;
+    --gris1: #C4C4C4;
+    --gris2: #807C7C;
+    --gris3:#565555;
     --secundario: #0097a7;
-    --primario: rgba(255, 193, 7,1);
     --oscuro: rgb(0, 0, 0);
-    
-
-}
-html{/*Hace cambios generales para todo el html*/
-    font-size: 62.5%;
-    box-sizing: border-box; /*Para colocarle un borde al css (recuerde que es una caja)*/
-
 }
 
-*,*:before,:after{ /* */
-    box-sizing: inherit;
+.bg-primary {
+    background-color: var(--primary) ;
 }
 
-body{
-
-font-size: 16px;
-font-family:"krub", sans-serif;
-
+.bar .container {
+    padding: 15px 0px;
+    display: flex;
+    justify-content: end;
 }
 
-.titulo{
+.bar .container a:last-of-type {
+    margin-left: 10px;
+}
 
+.logo{
+    height: 100px;
+}
+
+/* Estilos Cover */
+
+.cover_container {
+    display: flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cover_img {
+    /* width: 100%; */
+    height: 400px;
+    background-image: url("../img/Cover.jpg");
+    background-size: cover;
+}
+
+.cover_title, .cover_subtitle  {
+    color: white;
+}
+
+.cover_title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.cover_subtitle {
+    color: white;
+    font-size: 1rem;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+h1 {
     text-align: center;
-    color: blue;
-    font-size: 2em;
-    font-weight: 400;
-
-    }
-.contenedor{
-
-    width: 120rem;
-    margin: 0 auto;
-
-}
-.nav-bg{
-
-    background-color: var(--secundario);
-}
-.navegacion-principal{
-    
-    display:flex;
-flex-direction: column;
-
-}
-
-@media(min-width: 700px){
-    .navegacion-principal{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-.navegacion-principal a{
-    color:var(--blanco);
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 1rem; /*Cambia la margen interna*/
-}
-
-.navegacion-principal a:hover{
-    background-color: var(--primario);
-    color: var(--oscuro);
-    
-}
-
-.img1{
-    height: 410px;
-    background-image: url(../IMG/EscritorioOficina.jpeg);
+    color: var(--primary);
+    margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+/* Estilos de las Cajas o Cards */
+
+.card_container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-color: var(--gris1);
+    border-radius: 5px;
+    padding: 1rem;
+    height: 350px;
     position: relative;
-    
 }
 
-.contenido-img1{ /*Ajustar la imagen*/
-background-color: rgba(0, 0, 0, 0.7); /*Un negro para que no se vea muy brillante, pero algo opaco*/
-position: absolute;
-width: 100%;
-height: 100%;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-
+.card_image {
+    background-image: url("../img/GestionTransporte.png");
+    background-repeat: no-repeat;
+    height: 100px;
+    margin-bottom: 1rem;;
 }
 
-.contenido-img1 h2,
-.contenido-img1 p{
-    color: var --blanco
+.card_title {
+    color: var(--gris3);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
+.card_text {
+    color: var(--gris2);
+}
+
+.card_button {
+    position: absolute;
+    top: 85%
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--primary);
+}
+
+.footer_img_container {
+    width: 100%;
+}
+
+.footer_logo {
+    width: 100%;
+}
+
+.footer_redes  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_redes img {
+    width: 50px;
+}
+
+.footer_lists h3 {
+    color: var(--blanco);
+}
+
+.footer_lists ul li {
+    list-style: none;
+}
+
+.footer_lists ul li a, .footer_lists ul li {
+    color: var(--blanco);
+    text-decoration: none;
+}
