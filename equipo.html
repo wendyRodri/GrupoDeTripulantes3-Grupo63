@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda virtual</title>
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <div class="bar bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a class="btn btn-sm btn-primary" href="">Iniciar Sesion</a>
+            <a class="btn btn-sm btn-outline-light" href="">Registrarse</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="logo" src="img/Logo.png" alt="Logo" />
+          </div>
+          <div class="col d-flex justify-content-end align-items-center">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Quiénes somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+
+    <div class="container py-5">
+      <div class="row flex-lg-row-reverse align-items-center d-sm-flex justify-content-sm-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="img/team.png"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6 d-sm-flex justify-content-sm-center">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Quienes Somos?</h1>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+    </div>
+
+    <!-- Productos -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Conoce más sobre nuestro equipo de desarrollo</h1>
+          <p>Un grupo de jóvenes emprendedores que los últimos años han puesto sus habilidades al servicio del desarrollo web. Conoce un poco a quienes harán mas simple el ambiente virtual en el que más te mueves.</p>
+        </div>
+      </div>
+      <hr class="featurette-divider mb-5">
+    </div>
+
+    <div class="container team">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-4">
+              <img src="img/team/JuanCarlos.png" class="rounded" alt="">
+      
+              <h5>Juan Carlos Castro</h5>
+              <p>Product Owner y Desarrollador
+                Ingeniero de sistemas especialista en gerencia de proyectos con certificación PMP, Scrum
+                Master e ITIL. con experiencia en dirección de proyectos de desarrollo de software,
+                bajo marcos de trabajo ágiles y tradicionales.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="img/team/JuanFernando.png" class="rounded" alt="">
+      
+              <h5>Juan Fernando Ramirez</h5>
+              <p>Scrum Master y Desarrollador
+                Manejo de HTML, CSS, Javascript, Vue, Python, Java, Bases de Datos Relacionales en SQL y No Relacionales en MongoDB.
+                Manejo de Metodologías Ágiles de Desarrollo.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="img/team/JessitAnaya.png" class="rounded" alt="">
+      
+              <h5>Jessit Anaya Alsina</h5>
+              <p>Desarrollador. Manejo  de Python, Java, HTML, CSS, Javascript. Manejo de Metodología Ágil Scrum. Ingeniero Industrial. Especialista en Gerencia de Proyectos.</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="img/team/CristianRozo.png" class="rounded" alt="">
+        
+                <h5>Cristian Rozo López</h5>
+                <p>Desarrollador. Manejo de HTML, CSS, Javascript, Python, Java, Bases de Datos Relacionales en SQL y No Relacionales en MongoDB.
+                    Manejo de Metodologías Ágiles de Desarrollo.</p>
+              </div><!-- /.col-lg-4 -->      
+              
+              <div class="col-lg-4">
+                <img src="img/team/AlbertoDuque.png" class="rounded" alt="">
+        
+                <h5>Alberto Duque Villegas</h5>
+                <p>Desarrollador web, con conocimientos de Python, Java, Javascript, HTML, CSS, MySQL. 
+                    Solution Consultant Human Resources – mySAP   2005, Academia SAP.
+                    Psicólogo, especialista en Alta Gerencia.</p>
+              </div><!-- /.col-lg-4 -->                  
+          </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="py-5">
+      <div class="container py-3">
+        <div class="row d-flex">
+          <div class="col col-lg-4 col-sm-12 mb-3 mb-lg-0">
+            <div class="footer_img_container">
+              <div class="footer_logo">
+                <img class="logo" src="img/LogoFooter.png" alt="Logo" />
+              </div>
+              <div class="footer_redes">
+                <img src="img/twitter.png" alt="Twitter" />
+                <img src="img/facebook.png" alt="Facebook" />
+                <img src="img/instagram.png" alt="Instagram" />
+                <img src="img/linkedin.png" alt="LinkedIn" />
+                <img src="img/youtube.png" alt="Youtube" />
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-4 col-sm-12 mb-3 mb-lg-0 footer_lists">
+            <h3>Productos</h3>
+            <ul>
+              <li><a href="">Gestión de Peajes</a></li>
+              <li><a href="">Gestión de Transporte</a></li>
+              <li><a href="">Gestión de Software Facrory</a></li>
+            </ul>
+          </div>
+          <div
+            class="
+              col col-lg-4 col-sm-12
+              mb-3 mb-lg-0
+              footer_lists
+              position-relative
+            "
+          >
+            <h3>Contacto</h3>
+            <ul>
+              <li>(+57) 841 55 44</li>
+              <li>contacto@g3virtualstore.cmo</li>
+              <li>Cr. 18 No. 79 A - 42</li>
+              <li>Bogotá Colombia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
