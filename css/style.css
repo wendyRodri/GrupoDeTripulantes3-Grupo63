@@ -9,6 +9,10 @@
   --oscuro: rgb(0, 0, 0);
 }
 
+body {
+    min-width: 576px;
+}
+
 .bg-primary {
   background-color: var(--primary);
 }
@@ -109,40 +113,12 @@ h1 {
 
 /* Footer */
 
-footer {
-  background-color: var(--primary);
+footer ul li a {
+    font-size: 0.9rem;
 }
 
-.footer_img_container {
-  width: 100%;
-}
-
-.footer_logo {
-  width: 100%;
-}
-
-.footer_redes {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer_redes img {
-  width: 50px;
-}
-
-.footer_lists h3 {
-  color: var(--blanco);
-}
-
-.footer_lists ul li {
-  list-style: none;
-}
-
-.footer_lists ul li a,
-.footer_lists ul li {
-  color: var(--blanco);
-  text-decoration: none;
+footer p {
+    color: var(--gris3);
 }
 
 /* Team */
