@@ -14,5 +14,29 @@ Wendy Rodriguez
 
 ## Proyecto
 G3 Virtual Store
-(sujeto a cambio de nombre si optamos por una tienda de software)
 
+# Servidor
+
+## Iniciar Servidor Strapi
+
+```
+yarn develop
+```
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
