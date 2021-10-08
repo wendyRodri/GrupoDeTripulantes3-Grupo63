@@ -48,7 +48,8 @@
           :key="product.id"
           class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4"
         >
-          <div class="card_container">
+        <Product :product="product" />
+          <!-- <div class="card_container">
             <div class="card_image">
               <img :src="API_URL + product.Image.url" alt="{{product.Name}}" />
             </div>
@@ -64,119 +65,8 @@
                 <button class="btn btn-primary btn-sm">Agregar</button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
-
-        <!-- G3 Control de Peso Vehicular (G3 CPV) -->
-
-        <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-4">
-          <div class="card_container">
-            <div class="card_image">
-              <img src="../assets/img/transporte/Pesaje.png" alt="Pesaje" />
-            </div>
-            <div class="card_title">G3 Control de Peso Vehicular (G3 CPV)</div>
-            <div class="card_text">
-              <p>
-                Aplicación web para el control de peso vehicular en las
-                estaciones de pesaje del territorio nacional ajustados a la
-                normatividad vigente.
-              </p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- G3 Gestión de distribución interurbana (G3 GDI) -->
-
-        <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-4">
-          <div class="card_container">
-            <div class="card_image">
-              <img src="../assets/img/transporte/Distribution.png" alt="Distribucion" />
-            </div>
-            <div class="card_title">
-              G3 Gestión de distribución interurbana (G3 GDI)
-            </div>
-            <div class="card_text">
-              <p>
-                La distribución interurbana es uno de los grandes retos para las
-                empresas de transporte. El principal obstáculo es la integración
-                de los diversos actores de la cadena logística en un proceso
-                único y articulado que genere flujos de información veraz y
-                oportuna. Nuestra solución G3 GDI es ideal si su empresa
-                involucra diversos destinos, trayectos largos entre ciudades y
-                transferencias entre diferentes transportistas.
-              </p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- G3 Gestión de última milla – distribución urbana (G3 GUM-DU) -->
-
-        <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-4">
-          <div class="card_container">
-            <div class="card_image">
-              <img src="../assets/img/transporte/UltimaMilla.png" alt="UltimaMilla" />
-            </div>
-            <div class="card_title">
-              G3 Gestión de última milla – distribución urbana (G3 GUM-DU)
-            </div>
-            <div class="card_text">
-              <p>
-                El paso final en la cadena de distribución se ve obstaculizado
-                con frecuencia por la complejidad de la logística urbana. El
-                proceso requiere la entrega de múltiples paquetes en cortos
-                períodos de tiempo para cumplir con los compromisos con sus
-                clientes.
-              </p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- G3 Gestión de flota de vehículos (G3 GFV) -->
-
-        <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-4">
-          <div class="card_container">
-            <div class="card_image">
-              <img src="../assets/img/transporte/Terminal.png" alt="Terminal" />
-            </div>
-            <div class="card_title">
-              G3 Gestión de flota de vehículos (G3 GFV)
-            </div>
-            <div class="card_text">
-              <p>
-                Gestionar su propia flota de vehículos y la distribución de sus
-                productos puede ser bastante complejo cuando este no es el
-                centro de su negocio. Pensando en ello, G3 GFV ha incorporado
-                todas las funcionalidades necesarias para que usted y su equipo
-                de trabajo hagan el rastreo y las entregas de la manera más ágil
-                y oportuna para sus clientes.
-              </p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- G3 Transportista - Conductor - Repartidor (G3 TCR) -->
-
-        <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-4">
-          <div class="card_container">
-            <div class="card_image">
-              <img src="../assets/img/transporte/Delivery.png" alt="Delivery" />
-            </div>
-            <div class="card_title">
-              G3 Transportista - Conductor - Repartidor (G3 TCR)
-            </div>
-            <div class="card_text">
-              <p>
-                Si trabaja para una o varias empresas de distribución de
-                mercancías, a quienes debe informar sobre contratiempos, demoras
-                o entregas realizadas, ahora cuenta con G3 TCR, la opción ideal
-                para gestionar sus cargas y recibir oportunamente sus pagos. Una
-                aplicación veloz y fácil de usar que le permite informar sobre
-                el estado y novedades del viaje y la carga, y registrar de
-                manera instantánea las entregas con evidencia fotográfica.
-              </p>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
 
@@ -186,9 +76,13 @@
 <script>
 import { ref, onMounted } from 'vue';
 import { getProductByCatetory } from '../api/products';
+import Product from '@/components/Product.vue';
 import { API_URL } from '../utils/constants';
 
 export default {
+   components: {
+    Product,
+  },
   setup() {
     let products = ref(null);
 

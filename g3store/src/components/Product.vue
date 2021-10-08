@@ -10,24 +10,29 @@
     <div class="card_footer">
       <div class="card_price">{{ product.Price }}</div>
       <div>
-        <button class="btn btn-primary btn-sm">Agregar</button>
+        <button @click="addProductToCart(product.id)" class="btn btn-primary btn-sm">Agregar</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { API_URL } from '../utils/constants';
+import { API_URL } from '@/utils/constants';
+import { addProductToCartApi } from '@/api/cart'
 export default {
   name: 'Product',
   props: {
     product: Object,
-    title: String
   },
 
   setup() {
+    const addProductToCart = (idProduct) => {
+      addProductToCartApi(idProduct)
+    }
+
     return {
       API_URL,
+      addProductToCart
     };
   },
 };

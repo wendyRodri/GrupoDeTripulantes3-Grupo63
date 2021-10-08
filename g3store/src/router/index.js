@@ -29,28 +29,33 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "register" */ '../views/Register.vue'),
   },
+  {
+    path: '/gestion-transporte',
+    name: 'GestionTransporte',
+    component: () => import(/* webpackChunkName: "GestionTransporte" */ '../views/GestionTransporte.vue')
+  },
+  {
+    path: '/gestion-peajes',
+    name: 'GestionPeajes',
+    component: () => import(/* webpackChunkName: "GestionPeajes" */ '../views/GestionPeajes.vue')
+  },
+  {
+    path: '/software-factory',
+    name: 'SoftwareFactory',
+    component: () => import(/* webpackChunkName: "SoftwareFactory" */ '../views/SoftwareFactory.vue')
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: () => import(/* webpackChunkName: "Cart" */ '../views/Cart.vue')
+  },
   // {
-  //   path: '/gestion-transporte',
-  //   name: 'GestionTransporte',
-  //   component: () => import(/* webpackChunkName: "GestionTransporte" */ '../views/GestionTransporte.vue')
-  // },
-  // {
-  //   path: '/gestion-peajes',
-  //   name: 'GestionPeajes',
-  //   component: () => import(/* webpackChunkName: "GestionPeajes" */ '../views/GestionPeajes.vue')
-  // },
-  // {
-  //   path: '/software-factory',
-  //   name: 'SoftwareFactory',
-  //   component: () => import(/* webpackChunkName: "SoftwareFactory" */ '../views/SoftwareFactory.vue')
+  //   path: '/:category',
+  //   component: () => import(/* webpackChunkName: "Category" */ '../views/Category.vue')
   // },
   {
     path: '/:pathMatch(.*)*',
     component: () => import(/* webpackChunkName: "NoPageFound" */ '@/pages/NoPageFound'),
-  },
-  {
-    path: '/:category',
-    component: () => import(/* webpackChunkName: "Category" */ '../views/Category.vue')
   },
 
 ];

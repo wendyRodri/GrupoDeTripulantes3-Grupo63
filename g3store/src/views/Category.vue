@@ -28,7 +28,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1>Software para gestión de transporte</h1>
+          <h1></h1>
           <p>
             Aplicación web para el control de peso vehicular en las estaciones
             de pesaje del territorio nacional ajustados a la normatividad
@@ -71,9 +71,9 @@ export default {
   },
   
   watch: {
-      $router(to, from) {
+      $route(to, from) {
         this.getProducts(to.params.category),
-        this.geCategory(to.params.category)
+        this.getCategory(to.params.category)
       }
   },
 
@@ -84,7 +84,7 @@ export default {
 
     onMounted( async () => {
         getProducts(params.category),
-        geCategory(params.category)
+        getCategory(params.category)
     });
 
     const getProducts = async (category) => {
@@ -92,7 +92,7 @@ export default {
         products.value = response;
     };
 
-    const geCategory = async (category) => {
+    const getCategory = async (category) => {
         const response = await getCategoryBySlug(category);
         categories.value = response;
     };
@@ -100,7 +100,8 @@ export default {
     return {
         getProducts,
         products,
-        categories
+        categories,
+        getCategory
     }
   },
 };

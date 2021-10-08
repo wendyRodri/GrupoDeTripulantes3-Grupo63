@@ -1,5 +1,5 @@
 <template>
-  <header class="header" >
+  <header class="header">
     <div class="bg-primary">
       <div class="container">
         <!-- Login & Register -->
@@ -15,6 +15,13 @@
             >
               Registrarse
             </router-link>
+            <button
+              class="btn btn-sm btn-outline-light mx-2"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              <i class="fas fa-shopping-cart"></i>
+            </button>
           </div>
         </nav>
 
@@ -22,6 +29,13 @@
 
         <nav v-if="token" class="navbar justify-content-end">
           <div class="d-flex">
+            <button
+              class="btn btn-sm btn-outline-light mx-2"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              <i class="fas fa-shopping-cart"></i>
+            </button>
             <button @click="logout" class="btn btn-outline-light mx-2">
               <i class="fa fa-sign-out-alt"></i>
             </button>
@@ -62,32 +76,29 @@
         </ul>
       </nav>
     </div>
+    <Cart />
   </header>
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
 import { getTokenApi, deleteTokenApi } from '../api/token';
-import { getCategoriesApi } from '../api/category';
+import Cart from '@/components/Cart/Cart.vue';
 
 export default {
+  components: {
+    Cart,
+  },
+
   setup() {
-    let categories = ref(null);
     const token = getTokenApi();
     const logout = () => {
       deleteTokenApi();
       location.replace('/');
     };
 
-    onMounted(async () => {
-      const response = await getCategoriesApi();
-      categories.value = response;
-    });
-
     return {
       token,
       logout,
-      categories,
     };
   },
 };

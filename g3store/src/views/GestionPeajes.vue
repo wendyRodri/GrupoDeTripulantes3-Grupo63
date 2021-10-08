@@ -48,7 +48,8 @@
         v-for="product in products" 
         :key="product.id" 
         class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-          <div class="card_container">
+        <Product :product="product" />
+          <!-- <div class="card_container">
             <div class="card_image">
               <img 
               :src="API_URL + product.Image.url" alt="{{product.Name}}" />
@@ -62,10 +63,10 @@
             <div class="card_footer">
               <div class="card_price">{{ product.Price }}</div>
               <div>
-                <button class="btn btn-primary btn-sm">Agregar</button>
+                <button @click="addProductToCart" class="btn btn-primary btn-sm">Agregar</button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>
@@ -79,10 +80,13 @@
 
 import { ref, onMounted } from 'vue';
 import { getProductByCatetory } from '../api/products';
+import Product from '@/components/Product.vue';
 import { API_URL } from '../utils/constants';
 
 export default {
-
+ components: {
+    Product,
+  },
     setup() {
     let products = ref(null);
 
