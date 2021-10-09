@@ -11,9 +11,8 @@
       </div>
       <hr class="featurette-divider mb-5" />
     </div>
-    <div v-if="!isProductsInCart" class="container">
+    <div class="container">
       <table class="table">
-        {{isProductsInCart  }}
         <thead>
           <tr>
             <th scope="col">Producto</th>
@@ -44,15 +43,6 @@
         </tbody>
       </table>
     </div>
-    <div v-show="isProductsInCart" class="container">
-      <div class="row">
-        <div class="col">
-          <h1 class="text-center">
-            No hay productos para mostrar
-          </h1>
-        </div>
-      </div>
-    </div>
     <hr />
   </div>
 </template>
@@ -62,13 +52,10 @@ import { ref, watchEffect } from '@vue/runtime-core';
 import { getProductsCartApi, deleteAllProductCartApi } from '@/api/cart';
 export default {
   name: 'Cart',
-
   setup() {
     let products = ref(null);
     let reloadCart = ref(false);
-    let isProductsInCart = ref();
-    isProductsInCart = products.lenth ? true : false;
-
+    
     watchEffect(async () => {
       reloadCart.value;
       const response = await getProductsCartApi();
@@ -77,8 +64,9 @@ export default {
 
     const getTotal = () => {
       let totalTemp = 0;
+      if (!products.value) return
       products.value.forEach((product) => {
-      totalTemp += product.Price * product.quantity;
+        totalTemp += product.Price * product.quantity;
       });
       return totalTemp.toFixed(2);
     };
@@ -92,10 +80,7 @@ export default {
       products,
       getTotal,
       deleteAllProductCart,
-      isProductsInCart,
     };
   },
 };
 </script>
-
-<style></style>
