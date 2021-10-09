@@ -3,15 +3,17 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1> 
+          <h1>
             <i class="fas fa-cart-plus"></i>
-            Resumen Carrito de Compras</h1>
+            Resumen Carrito de Compras
+          </h1>
         </div>
       </div>
       <hr class="featurette-divider mb-5" />
     </div>
-    <div class="container">
+    <div v-if="!isProductsInCart" class="container">
       <table class="table">
+        {{isProductsInCart  }}
         <thead>
           <tr>
             <th scope="col">Producto</th>
@@ -41,9 +43,14 @@
           </tr>
         </tbody>
       </table>
-      <div>
-        <h3>No Hay Productos en el Carrito</h3>
-        <sub></sub>
+    </div>
+    <div v-show="isProductsInCart" class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">
+            No hay productos para mostrar
+          </h1>
+        </div>
       </div>
     </div>
     <hr />
@@ -59,6 +66,8 @@ export default {
   setup() {
     let products = ref(null);
     let reloadCart = ref(false);
+    let isProductsInCart = ref();
+    isProductsInCart = products.lenth ? true : false;
 
     watchEffect(async () => {
       reloadCart.value;
@@ -69,7 +78,7 @@ export default {
     const getTotal = () => {
       let totalTemp = 0;
       products.value.forEach((product) => {
-        totalTemp += product.Price * product.quantity;
+      totalTemp += product.Price * product.quantity;
       });
       return totalTemp.toFixed(2);
     };
@@ -83,6 +92,7 @@ export default {
       products,
       getTotal,
       deleteAllProductCart,
+      isProductsInCart,
     };
   },
 };
