@@ -26,7 +26,7 @@
           <div class="modal-body">
             <div>
               <CartItem :products="products" :reloadCartFn="reloadCartFn" />
-              <CartFooter :products="products" />
+              <CartFooter :products="products" v-if="products" />
             </div>
           </div>
           <div class="modal-footer">
