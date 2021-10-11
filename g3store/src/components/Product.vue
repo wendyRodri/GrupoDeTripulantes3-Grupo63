@@ -27,12 +27,12 @@ export default {
 
   setup() {
     const addProductToCart = (idProduct) => {
-      addProductToCartApi(idProduct)
+      addProductToCartApi(idProduct);
     }
 
     return {
       API_URL,
-      addProductToCart
+      addProductToCart,
     };
   },
 };

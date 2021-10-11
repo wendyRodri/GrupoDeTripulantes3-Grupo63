@@ -38,7 +38,14 @@
               Cerrar
             </button>
             <router-link to="/cart">
-              <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-primary">Comprar</button>
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                class="btn btn-primary"
+              >
+                Comprar
+              </button>
             </router-link>
           </div>
         </div>
@@ -48,12 +55,12 @@
 </template>
 
 <script>
-import { ref, watchEffect } from 'vue';
-import { getProductsCartApi } from '@/api/cart';
-import CartItem from '@/components/Cart/CartItem.vue';
-import CartFooter from '@/components/Cart/CartFooter.vue';
+import { ref, watchEffect } from "vue";
+import { getProductsCartApi } from "@/api/cart";
+import CartItem from "@/components/Cart/CartItem.vue";
+import CartFooter from "@/components/Cart/CartFooter.vue";
 export default {
-  name: 'Cart',
+  name: "Cart",
   components: {
     CartItem,
     CartFooter,

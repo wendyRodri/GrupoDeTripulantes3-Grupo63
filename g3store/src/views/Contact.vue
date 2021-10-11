@@ -87,9 +87,9 @@
               <div class="d-flex gap-2 w-100 justify-content-between">
                 <div>
                   <h6 class="mb-0">Teléfonos</h6>
-                  <p class="mb-0 opacity-75">Línea de Bogotá: 57(1) 5802606</p>
-                  <p class="mb-0 opacity-75">Barranquilla: 57(5) 3225103</p>
-                  <p class="mb-0 opacity-75">Cali: 57(2) 3989476</p>
+                  <p class="mb-0 opacity-75">Línea de Bogotá: 60(1) 5802606</p>
+                  <p class="mb-0 opacity-75">Barranquilla: 60(5) 3225103</p>
+                  <p class="mb-0 opacity-75">Cali: 60(2) 3989476</p>
                 </div>
               </div>
             </li>

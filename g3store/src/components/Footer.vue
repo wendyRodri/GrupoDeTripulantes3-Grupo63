@@ -18,7 +18,7 @@
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><router-link class="nav-link p-0 text-muted" to="/">Inicio</router-link></li>
               <li class="nav-item mb-2"><router-link class="nav-link p-0 text-muted" to="/team">Quiénes somos</router-link></li>
-              <li class="nav-item mb-2"><router-link class="nav-link p-0 text-muted" to="/contact">Concacto</router-link></li>
+              <li class="nav-item mb-2"><router-link class="nav-link p-0 text-muted" to="/contact">Contacto</router-link></li>
 
             </ul>
           </div>

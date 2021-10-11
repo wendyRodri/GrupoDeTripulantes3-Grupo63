@@ -1,14 +1,14 @@
 <template>
-<div class="cart_footer">
-  <span>Total:</span>
-  <span>{{ total }}</span>
-</div>
+  <div class="cart_footer">
+    <span>Total:</span>
+    <span>{{ total }}</span>
+  </div>
 </template>
 
 <script>
-import { ref, watchEffect } from '@vue/runtime-core';
+import { ref, watchEffect } from "@vue/runtime-core";
 export default {
-  name: 'CartFooter',
+  name: "CartFooter",
   props: {
     products: Array,
   },
@@ -31,13 +31,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .cart_footer {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: #F1F4F7;
+  background-color: #f1f4f7;
   border-radius: 5px;
   padding: 1rem;
   margin-top: 1rem;
@@ -47,7 +46,7 @@ export default {
   font-size: 1.5rem;
 }
 
-.cart_footer span:first-child  {
+.cart_footer span:first-child {
   color: #565555;
 }
 
@@ -56,7 +55,6 @@ export default {
 }
 
 .cart_footer span:last-child:before {
-  content: '$ ';
+  content: "$ ";
 }
-
 </style>
