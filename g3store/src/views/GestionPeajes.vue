@@ -30,9 +30,7 @@
         <div class="col">
           <h1>Software para gestión de peajes</h1>
           <p>
-            Aplicación web para el control de peso vehicular en las estaciones
-            de pesaje del territorio nacional ajustados a la normatividad
-            vigente.
+            Soluciones avanzadas para la administración de cobros a los usuarios de carreteras y vías urbanas, de acuerdo con las modalidades y circunstancias de uso.
           </p>
         </div>
       </div>

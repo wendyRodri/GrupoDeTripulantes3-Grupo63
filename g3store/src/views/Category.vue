@@ -4,7 +4,15 @@
 
     <div class="container py-5">
       <div
-        class="row flex-lg-row-reverse align-items-center d-sm-flex justify-content-sm-center g-5 py-5"
+        class="
+          row
+          flex-lg-row-reverse
+          align-items-center
+          d-sm-flex
+          justify-content-sm-center
+          g-5
+          py-5
+        "
       >
         <div class="col-10 col-sm-8 col-lg-6">
           <img
@@ -49,7 +57,6 @@
           class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4"
         >
           <Product :product="product" />
-
         </div>
       </div>
     </div>
@@ -58,51 +65,50 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
-import Product from '@/components/Product.vue';
-import { getProductsCategory } from '../api/products';
-import { getCategoryBySlug } from '../api/category';
+import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import Product from "@/components/Product.vue";
+import { getProductsCategory } from "../api/products";
+import { getCategoryBySlug } from "../api/category";
 
 export default {
-  name: 'Category',
+  name: "Category",
   components: {
     Product,
   },
-  
+
   watch: {
-      $route(to, from) {
-        this.getProducts(to.params.category),
-        this.getCategory(to.params.category)
-      }
+    $route(to, from) {
+      this.getProducts(to.params.category),
+        this.getCategory(to.params.category);
+    },
   },
 
   setup() {
     let products = ref(null);
     let categories = ref(null);
-    const { params } = useRoute()
+    const { params } = useRoute();
 
-    onMounted( async () => {
-        getProducts(params.category),
-        getCategory(params.category)
+    onMounted(async () => {
+      getProducts(params.category), getCategory(params.category);
     });
 
     const getProducts = async (category) => {
-        const response = await getProductsCategory(category);
-        products.value = response;
+      const response = await getProductsCategory(category);
+      products.value = response;
     };
 
     const getCategory = async (category) => {
-        const response = await getCategoryBySlug(category);
-        categories.value = response;
+      const response = await getCategoryBySlug(category);
+      categories.value = response;
     };
 
     return {
-        getProducts,
-        products,
-        categories,
-        getCategory
-    }
+      getProducts,
+      products,
+      categories,
+      getCategory,
+    };
   },
 };
 </script>

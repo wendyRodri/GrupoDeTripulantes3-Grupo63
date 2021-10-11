@@ -4,7 +4,15 @@
 
     <div class="container py-5">
       <div
-        class="row flex-lg-row-reverse align-items-center d-sm-flex justify-content-sm-center g-5 py-5"
+        class="
+          row
+          flex-lg-row-reverse
+          align-items-center
+          d-sm-flex
+          justify-content-sm-center
+          g-5
+          py-5
+        "
       >
         <div class="col-10 col-sm-8 col-lg-6">
           <img
@@ -30,9 +38,9 @@
         <div class="col">
           <h1>Software para gestión de transporte</h1>
           <p>
-            Aplicación web para el control de peso vehicular en las estaciones
-            de pesaje del territorio nacional ajustados a la normatividad
-            vigente.
+            Aplicaciones web para la gestión de la cadena productiva de
+            transporte terrestre: control de peso vehicular, distribución y
+            flota de vehículos.
           </p>
         </div>
       </div>
@@ -48,7 +56,7 @@
           :key="product.id"
           class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4"
         >
-        <Product :product="product" />
+          <Product :product="product" />
           <!-- <div class="card_container">
             <div class="card_image">
               <img :src="API_URL + product.Image.url" alt="{{product.Name}}" />
@@ -74,20 +82,20 @@
   </div>
 </template>
 <script>
-import { ref, onMounted } from 'vue';
-import { getProductByCatetory } from '../api/products';
-import Product from '@/components/Product.vue';
-import { API_URL } from '../utils/constants';
+import { ref, onMounted } from "vue";
+import { getProductByCatetory } from "../api/products";
+import Product from "@/components/Product.vue";
+import { API_URL } from "../utils/constants";
 
 export default {
-   components: {
+  components: {
     Product,
   },
   setup() {
     let products = ref(null);
 
     onMounted(async () => {
-      const response = await getProductByCatetory('2');
+      const response = await getProductByCatetory("2");
       products.value = response;
     });
     return {
